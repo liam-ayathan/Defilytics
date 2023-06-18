@@ -1,5 +1,5 @@
 # Defilytics
-Check your the latest prices of crypto, your current wallet balance and your current NFT holdings with this nifty portfolio tracker! The telegram bot is live check it out [here](https://t.me/DefilyticsBot)
+Check your the latest prices of crypto, your current wallet balance and your current NFT holdings with this nifty portfolio tracker! Deployment in progress
 
 <ul>
 The Project consists of two main parts
@@ -48,7 +48,7 @@ After which the contract should be deployed!
 3. [Using Data Feeds on EVM](https://docs.chain.link/data-feeds/using-data-feeds)
 
 ## Telegram Bot
-In this section I will go through the telegram bot at a glance from the front end. The telegram bot was built using python, for the detailed code breakdown do look through defi.py or reach out to me! Do check out the live bot [here](https://t.me/DefilyticsBot)
+In this section I will go through the telegram bot at a glance from the front end. The telegram bot was built using python, for the detailed code breakdown do look through defi.py or reach out to me!
 
 ### Functions and Explanation
 
