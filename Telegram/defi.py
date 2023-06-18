@@ -80,7 +80,7 @@ abi = [
     }
   ]
 
-# Logger
+# Loggerdea
 logger = logging.getLogger(__name__)
 
 # Telegram
