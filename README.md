@@ -21,12 +21,18 @@ In this section I will go through some of the details of the smart contract. Thi
 ### Functions and Explanation
 In the first code block, I am importing the AggregatorV3Interface oracle contract from chainlink to get the price feeds of different cryptocurrencies. I then initialize different price feed variables using their contract addresses on the sepolia tesnet within the constructor.
 
+<img src="Images/1_Code_Block.JPG"/>
+
 In the second code block, the function getLatesPrices() calls getLatestPrice() for each cryptocurrency price feed and returns them in a tuple. I also define a pure function to retrieve the names of each cryptocurrency with reference to their position in getLatestPrice(); i.e. the return value of position 0 will give me "Ethereum" from getNames() and its corresponding price in getLatestPrices().
+
+<img src="Images/2_Code_Block.JPG"/>
 
 ### Set Up
 First create a .env file within the PriceFeeds(hardhat) folder as seen below and intialize two environment variables:
 1. ALCHEMY_HTTP_URL -> Regsiter for a sepolia tesnet API Token at [Alchemy](https://dashboard.alchemy.com/)
 2. PRIVATE_KEY -> Export your private key from your developer wallet (make sure its not your real one)
+
+<img src="Images/3_Code_Block.JPG"/>
 
 In the terminal follow these commands:
 1. cd PriceFeeds(hardhat)
@@ -48,15 +54,27 @@ In this section I will go through the telegram bot at a glance from the front en
 
 At the start users can choose demo wallet, add wallet and view prices
 
+<img src="Images/4_Tele.JPG"/>
+
 After pressing demo wallet, the user will be shown the demo wallet address and will be presented with the option to view the current wallet balance, view the wallets NFTs or go back
+
+<img src="Images/5_Tele.JPG"/>
 
 When the user presses view balance
 
+<img src="Images/6_Tele.JPG"/>
+
 When the user presses view nfts (he can scroll through using next or previous)
+
+<img src="Images/7_Tele.JPG"/>
 
 If the user presses add wallet he will be prompted to give a wallet address which will be added to the Bot
 
+<img src="Images/8_Tele.JPG"/>
+
 If the user presses view prices he will be shown the latest prices of Ethereum, Bitcoin and USDC
+
+<img src="Images/9_Tele.JPG"/>
 
 ### Set Up
 First create a .env file within the Telegram folder as seen below and intialize two environment variables:
@@ -64,6 +82,8 @@ First create a .env file within the Telegram folder as seen below and intialize 
 2. HTTP_ENDPOINT_ETH -> Regsiter for a ethereuem mainnet API Token at [Alchemy](https://dashboard.alchemy.com/)
 3. OPENSEA_API -> Follow [this](https://docs.opensea.io/reference/api-keys) guide to register for an Opensea API token
 4. WSS_ENDPOINT_SEPOLIA -> Regsiter for a sepolia tesnet API Token at [Alchemy](https://dashboard.alchemy.com/)
+
+<img src="Images/10_Tele.JPG"/>
 
 In the terminal follow these commands:
 1. cd Telegram
