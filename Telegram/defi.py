@@ -85,6 +85,7 @@ logger = logging.getLogger(__name__)
 
 # Telegram
 TELE_TOKEN_TEST = os.getenv("TELE_TOKEN")
+PORT = int(os.environ.get('PORT', 5000))
 ROUTE, ADD_WALLET,CHECK_RESPONSE = range(3)
 
 """
@@ -456,5 +457,12 @@ if __name__ == '__main__':
             CHECK_RESPONSE: [MessageHandler(filters.TEXT,check_response_add)],})
 
     application.add_handler(conversation_handler)
-    application.run_polling()
-    logger.info("Application running via polling")
+    if os.getenv("WEBHOOK_URL"):
+        application.run_webhook(listen="0.0.0.0",
+                            port=int(PORT),
+                            url_path=TELE_TOKEN_TEST,
+                            webhook_url=os.getenv("WEBHOOK_URL") + TELE_TOKEN_TEST)
+        logger.info("Application running via webhook: ", TELE_TOKEN_TEST)
+    else:
+        application.run_polling()
+        logger.info("Application running via polling")
