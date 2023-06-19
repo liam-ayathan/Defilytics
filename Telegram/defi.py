@@ -429,7 +429,7 @@ async def view_nfts(update, context: ContextTypes.DEFAULT_TYPE):
 async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text="Sorry did not understand please use or press the /start again" 
+        text="Sorry did not understand please use or press the /start command again" 
     )
     return ConversationHandler.END
 
